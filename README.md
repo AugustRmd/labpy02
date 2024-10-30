@@ -7,11 +7,12 @@ flowchart TD
     B --> C{Jenis ticket}
     C -- vip --> D[harga_ticket = vip]
     C -- reguler --> E[harga_ticket = reguler]
-    C -- tidak valid --> F[/Cetak 'Input tidak valid' & keluar/]
+    C -- tidak valid --> F[/Cetak 'Input tidak valid'/]
+    F --> K
     D --> G[/Input kartu member/]
     E --> G
     G --> H{Member=='ya'?}
-    H -- True --> I[Diskon 20%]
+    H -- True --> I[harga_ticket -= harga_ticket*0,2]
     H -- False --> K[/Cetak harga ticket/]
     I --> K
     K --> L([End])
@@ -31,7 +32,8 @@ flowchart TD
     E -- ' - ' --> G[Hasil = a - b]
     E -- ' * ' --> H[Hasil = a * b]
     E -- ' / ' --> I[Hasil = a / b]
-    E -- Else --> J[Cetak 'Input tidak valid' & keluar]
+    E -- Else --> J[Cetak 'Input tidak valid']
+    J --> L
     F --> K[/Cetak Hasilnya/]
     G --> K
     H --> K
