@@ -31,7 +31,7 @@ flowchart TD
     E -- ' - ' --> G[Hasil = a - b]
     E -- ' * ' --> H[Hasil = a * b]
     E -- ' / ' --> I[Hasil = a / b]
-    E -- lainnya --> J[Cetak 'Input tidak valid' & keluar]
+    E -- Else --> J[Cetak 'Input tidak valid' & keluar]
     F --> K[/Cetak Hasilnya/]
     G --> K
     H --> K
