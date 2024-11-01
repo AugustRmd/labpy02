@@ -1,11 +1,11 @@
 # Sistem Pembelian Tiket
-Program sederhana untuk menghitung harga tiket berdasarkan jenis tiket dan status keanggotaan.
+Program sederhana untuk menghitung harga tiket berdasarkan jenis tiket dan status member.
 
 ## Deskripsi
 Program ini memungkinkan pengguna untuk:
 
 Memilih jenis tiket (VIP/Reguler)
-Menentukan status keanggotaan
+Menentukan status member
 Mendapatkan perhitungan harga tiket final dengan diskon jika memiliki kartu member
 
 ## Flowchart Program
@@ -26,6 +26,43 @@ flowchart TD
     K --> L([End])
 
 ````
+
+## Contoh Output Program
+
+
+
+
+## Cara Kerja Program:
+
+1. Program menentukan harga awal:
+   - Tiket VIP: Rp 100.000
+   - Tiket Reguler: Rp 50.000
+
+2. User diminta memilih jenis tiket:
+   - Jika memilih "vip", harga diset Rp 100.000
+   - Jika memilih "reguler", harga diset Rp 50.000
+   - Jika input selain keduanya, program berhenti dengan pesan "Input tidak valid"
+
+3. User diminta konfirmasi kepemilikan kartu member:
+   - Jika memiliki kartu member (input "ya"), akan mendapat diskon 20%
+   - Jika tidak memiliki (input "tidak"), tidak ada diskon
+
+4. Program menampilkan harga akhir setelah perhitungan diskon
+
+Contoh perhitungan:
+- Jika pilih VIP dan punya member:
+  Rp 100.000 - (20% × Rp 100.000) = Rp 80.000
+- Jika pilih Reguler dan punya member:
+  Rp 50.000 - (20% × Rp 50.000) = Rp 40.000
+
+
+
+
+
+
+
+
+
 
 ## Flowchaart Kalkulator
 
