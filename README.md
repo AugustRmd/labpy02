@@ -58,11 +58,11 @@ Contoh perhitungan:
 
 
 
+# Program Kalkulator Sederhana
+Program kalkulator sederhana untuk menghitung inputan dari user.
 
-
-
-
-
+## Deskripsi Program
+Program kalkulator sederhana yang mampu melakukan operasi dasar matematika dengan dua bilangan.
 
 ## Flowchaart Kalkulator
 
@@ -86,3 +86,16 @@ flowchart TD
     K --> L([End])
 
 ````
+
+## Contoh Output Program
+
+
+## Cara Kerja Program
+
+### Alur Proses Kalkulator
+1. Program meminta input angka pertama
+2. Program meminta input angka kedua
+3. Program meminta input operator matematika
+4. Fungsi `kalkulator()` memproses input sesuai operator
+5. Menampilkan hasil perhitungan
+
