@@ -1,6 +1,14 @@
-# labpy02
+# Sistem Pembelian Tiket
+Program sederhana untuk menghitung harga tiket berdasarkan jenis tiket dan status keanggotaan.
 
-## Flowchart Ticket
+## Deskripsi
+Program ini memungkinkan pengguna untuk:
+
+Memilih jenis tiket (VIP/Reguler)
+Menentukan status keanggotaan
+Mendapatkan perhitungan harga tiket final dengan diskon jika memiliki kartu member
+
+## Flowchart Program
 ````mermaid
 flowchart TD
     A([Start]) --> B[/Input jenis ticket/]
