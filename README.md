@@ -62,7 +62,7 @@ Contoh perhitungan:
 Program kalkulator sederhana untuk menghitung inputan dari user.
 
 ## Deskripsi Program
-Program kalkulator sederhana yang mampu melakukan operasi dasar matematika dengan dua bilangan.
+Program kalkulator sederhana yang mampu melakukan operasi dasar matematika dengan dua bilangan, user bisa memilih operasi yang ingin mereka lakukak (+,-.x.\).
 
 ## Flowchaart Kalkulator
 
