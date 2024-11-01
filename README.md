@@ -1,35 +1,41 @@
 # Sistem Pembelian Tiket
 Program sederhana untuk menghitung harga tiket berdasarkan jenis tiket dan status member.
 
-## Deskripsi
+## Deskripsi Program
 Program ini memungkinkan pengguna untuk:
 
 Memilih jenis tiket (VIP/Reguler)
 Menentukan status member
 Mendapatkan perhitungan harga tiket final dengan diskon jika memiliki kartu member
 
-## Flowchart Program
+## Flowchart Ticket
 ````mermaid
 flowchart TD
-    A([Start]) --> B[/Input jenis ticket/]
-    B --> C{Jenis ticket}
-    C -- vip --> D[harga_ticket = vip]
-    C -- reguler --> E[harga_ticket = reguler]
-    C -- tidak valid --> F[/Cetak 'Input tidak valid'/]
-    F --> K
-    D --> G[/Input kartu member/]
-    E --> G
-    G --> H{Member=='ya'?}
-    H -- True --> I[harga_ticket -= harga_ticket*0,2]
-    H -- False --> K[/Cetak harga ticket/]
-    I --> K
-    K --> L([End])
+    A[Start] --> B[Set harga tiket VIP = 100000]
+    B --> C[Set harga tiket Reguler = 50000]
+    C --> D{Input jenis tiket}
+    
+    D -->|vip| E[harga_ticket = 100000]
+    D -->|reguler| F[harga_ticket = 50000]
+    D -->|input lain| G[Print 'Input tidak valid']
+    G --> H[Exit]
+    
+    E --> I{Input kartu member}
+    F --> I
+    
+    I -->|ya| J[Hitung diskon 20%]
+    I -->|tidak| K[Tidak ada diskon]
+    
+    J --> L[Print harga akhir]
+    K --> L
+    
+    L --> M[End]
 
 ````
 
 ## Contoh Output Program
 
-
+![Output](output/outputticket.png)
 
 
 ## Cara Kerja Program:
@@ -69,25 +75,29 @@ Program kalkulator sederhana yang mampu melakukan operasi dasar matematika denga
 
 ````mermaid
 flowchart TD
-    A([Start]) --> B[/Input angka pertama/]
-    B --> C[/Input angka kedua/]
-    C --> D[/Input operator/]
-    D --> E{Operator}
-    E -- ' + ' --> F[Hasil = a + b]
-    E -- ' - ' --> G[Hasil = a - b]
-    E -- ' * ' --> H[Hasil = a * b]
-    E -- ' / ' --> I[Hasil = a / b]
-    E -- Else --> J[Cetak 'Input tidak valid']
-    J --> L
-    F --> K[/Cetak Hasilnya/]
+    A([Start]) --> B[/Input Angka Pertama/]
+    B --> C[/Input Angka Kedua/]
+    C --> D[/Input Operator/]
+    
+    D --> E{Operator Valid?}
+    E -->|Tambah '+'| F[Hitung a + b]
+    E -->|Kurang '-'| G[Hitung a - b]
+    E -->|Kali '*'| H[Hitung a * b]
+    E -->|Bagi '/'| I[Hitung a / b]
+    E -->|Operator Lain| J[/Tampilkan Error/]
+    
+    F --> K[/Tampilkan Hasil/]
     G --> K
     H --> K
     I --> K
-    K --> L([End])
+    
+    J --> L([Exit])
+    K --> M([End])
 
 ````
 
 ## Contoh Output Program
+![Output](output/outputkalkulator.png)
 
 
 ## Cara Kerja Program
